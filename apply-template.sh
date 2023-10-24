@@ -1,16 +1,10 @@
 #!/usr/bin/env bash
 
-versions="
-5.0.3@8.1
-5.0.3@8.2
-5.1.0@8.1
-5.1.0@8.2
-"
-
 dockerfile_template=templates/Dockerfile
 ci_script_template=templates/build.yml
 dockerfiles_path=dockerfiles
 ci_script_path=.github/workflows/build.yml
+versions=`cat versions.txt`
 
 get_swoole_version() {
   echo ${1} | awk -F'@' '{print $1}'
