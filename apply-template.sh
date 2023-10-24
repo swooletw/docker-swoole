@@ -5,6 +5,8 @@ dockerfiles_path=dockerfiles
 versions="
 5.0.3@8.1
 5.0.3@8.2
+5.1.0@8.1
+5.1.0@8.2
 "
 
 for version in ${versions}; do
